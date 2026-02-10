@@ -8,7 +8,12 @@ import hashlib
 
 class UserDatabase:
     def __init__(self, db_path='users.db'):
-        self.conn = sqlite3.connect(db_path, check_same_thread=False)
+        # Подключаемся с поддержкой нового адаптера datetime
+        self.conn = sqlite3.connect(
+            db_path,
+            check_same_thread=False,
+            detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES
+        )
         self.create_tables()
 
     def create_tables(self):
