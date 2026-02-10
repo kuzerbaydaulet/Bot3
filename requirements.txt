@@ -1,0 +1,5 @@
+pyTelegramBotAPI==4.30.0
+python-dotenv==1.0.0
+openai==1.12.0  # ВЕРНЕМ БОЛЕЕ НОВУЮ ВЕРСИЮ!
+Pillow==10.2.0
+requests==2.31.0
